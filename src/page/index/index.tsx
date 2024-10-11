@@ -3,6 +3,7 @@ import { Link, Outlet } from "react-router-dom";
 import './index.css';
 import { useEffect, useState } from "react";
 import cookies from 'js-cookie';
+import './index.css';
 
 export function Index() {
 
@@ -28,7 +29,6 @@ export function Index() {
         const userInfo = localStorage.getItem('user_info');
         if(userInfo) {
             const info = JSON.parse(userInfo);
-            console.log('info: ', info);
             setHeadPic(info.headPic);
         } else {
             window.location.href = "/login";
@@ -42,7 +42,7 @@ export function Index() {
             <h1><Link to={'/'}>会议室预定系统</Link></h1>
             <Link to={'/update_info'} >
                 {
-                    headPic ? <img src={'http://localhost:3005/'+ headPic} width={40} height={40} className="icon"/> : <UserOutlined className="icon"/>
+                    headPic ? <img src={ headPic} width={40} height={40} className="icon"/> : <UserOutlined className="icon"/>
                 }                
             </Link>
         </div>
@@ -51,3 +51,4 @@ export function Index() {
         </div>
     </div>
 }
+

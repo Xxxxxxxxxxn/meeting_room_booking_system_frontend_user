@@ -35,7 +35,7 @@ export function UpdateInfo() {
                     const info = JSON.parse(userInfo);
                     info.headPic = values.headPic;
                     info.nickName = values.nickName;
-
+                
                     localStorage.setItem('user_info', JSON.stringify(info));
                 }
 
