@@ -3,6 +3,7 @@ import './login.css';
 import { login } from '../../interface/interfaces';
 import { useCallback } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { address } from '../constan';
 
 interface LoginUser {
     username: string;
@@ -80,7 +81,7 @@ export function Login() {
                 <div>
                     <a href="#" onClick={() => {
                         // window.location.href = "http://localhost:3005/user/google";
-                        window.location.href = "http://121.40.76.186:81/user/google";
+                        window.location.href =  address+"/user/google";
                     }}>Google 账号登录</a>
                 </div>
             </Form.Item>

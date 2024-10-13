@@ -3,6 +3,7 @@ import { Button, Input, message } from "antd";
 import Dragger, { DraggerProps } from "antd/es/upload/Dragger";
 import { presignedUrl } from "../../interface/interfaces";
 import axios from "axios";
+import { address } from "../constan";
 
 interface HeadPicUploadProps {
     value?: string;
@@ -26,7 +27,7 @@ const props: DraggerProps = {
     onChange(info) {
         const { status } = info.file;
         if (status === 'done') {
-            onChange('http://121.40.76.186:9000/picture/' + info.file.name);
+            onChange(address +'?/name='+ info.file.name);
             message.success(`${info.file.name} 文件上传成功`);
         } else if (status === 'error') {
             message.error(`${info.file.name} 文件上传失败`);
