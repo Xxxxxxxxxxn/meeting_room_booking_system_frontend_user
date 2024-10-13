@@ -1,8 +1,7 @@
-import { DatePicker, Form, Input, InputNumber, Modal, Select, TimePicker, message } from "antd";
+import { DatePicker, Form, Input,  Modal, TimePicker, message } from "antd";
 import { useForm } from "antd/es/form/Form";
 import { bookingAdd } from "../../interface/interfaces";
 import { MeetingRoomSearchResult } from "./MeetingRoomList";
-import moment from 'moment'
 interface CreateBookingModalProps {
     isOpen: boolean;
     handleClose: Function;
@@ -41,12 +40,10 @@ export function CreateBookingModal(props: CreateBookingModalProps) {
             message.error(res.data.data);
         }
     }
-
     return <Modal title="创建会议室" open={props.isOpen} onOk={handleOk} onCancel={() => props.handleClose()} okText={'创建'}>
         <Form
             form={form}
             colon={false}
-            // defaultValue={{rangeStartDate: new Date(),rangeStartTime:new Date(),rangeEndDate:new Date()}}
             {...layout}
         >
             <Form.Item
@@ -63,8 +60,7 @@ export function CreateBookingModal(props: CreateBookingModalProps) {
                 ]}
             >
                 <DatePicker
-                defaultValue={moment( new Date(), 'YYYY-MM-DD')}
-                
+                format={'YYYY-MM-DD'}
                 />
             </Form.Item>
             <Form.Item
@@ -84,7 +80,8 @@ export function CreateBookingModal(props: CreateBookingModalProps) {
                 ]}
             >
                 <DatePicker
-                defaultValue={moment( new Date(), 'YYYY-MM-DD')}
+                format={'YYYY-MM-DD'}
+
                 />
             </Form.Item>
             <Form.Item

@@ -79,7 +79,8 @@ export function Login() {
             >
                 <div>
                     <a href="#" onClick={() => {
-                        window.location.href = "http://localhost:3005/user/google";
+                        // window.location.href = "http://localhost:3005/user/google";
+                        window.location.href = "http://121.40.76.186:81/user/google";
                     }}>Google 账号登录</a>
                 </div>
             </Form.Item>

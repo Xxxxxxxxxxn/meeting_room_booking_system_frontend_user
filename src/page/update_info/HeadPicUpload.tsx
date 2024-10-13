@@ -12,7 +12,6 @@ let onChange:Function
 
 const props: DraggerProps = {
     name: 'file',
-    // action: 'http://localhost:3005/user/upload',
     action: async (file) => {
         const res = await presignedUrl(file.name);
         return res.data.data;
@@ -27,7 +26,7 @@ const props: DraggerProps = {
     onChange(info) {
         const { status } = info.file;
         if (status === 'done') {
-            onChange('http://localhost:9000/picture/' + info.file.name);
+            onChange('http://121.40.76.186:9000/picture/' + info.file.name);
             message.success(`${info.file.name} 文件上传成功`);
         } else if (status === 'error') {
             message.error(`${info.file.name} 文件上传失败`);

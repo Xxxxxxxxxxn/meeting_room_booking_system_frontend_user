@@ -8,7 +8,11 @@ import { SearchBooking } from "../page/booking_history/BookingHistory";
 import { CreateBooking } from '../page/meeting_room_list/CreateBookingModal';
 
 const axiosInstance = axios.create({
-    baseURL: 'http://localhost:3005/',
+    baseURL: 'http://121.40.76.186/api',
+
+    // baseURL: 'http://localhost:3005/',
+    // dev
+    // baseURL: 'http://localhost:3006/',
     timeout: 3000
 });
 
