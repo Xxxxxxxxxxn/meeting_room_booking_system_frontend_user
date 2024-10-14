@@ -6,9 +6,10 @@ import { UserInfo } from "../page/update_info/UpdateInfo";
 import { message } from "antd";
 import { SearchBooking } from "../page/booking_history/BookingHistory";
 import { CreateBooking } from '../page/meeting_room_list/CreateBookingModal';
+import { address } from '../page/constan';
 
 const axiosInstance = axios.create({
-    baseURL: 'http://121.40.76.186/api',
+    baseURL: address,
 
     // baseURL: 'http://localhost:3005/',
     // dev
