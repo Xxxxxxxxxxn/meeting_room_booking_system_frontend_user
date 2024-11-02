@@ -75,7 +75,7 @@ export function Login() {
                 </div>
             </Form.Item>
 
-            <Form.Item
+            {/* <Form.Item
                 {...layout2}
             >
                 <div>
@@ -84,7 +84,7 @@ export function Login() {
                         window.location.href =  address+"/user/google";
                     }}>Google 账号登录</a>
                 </div>
-            </Form.Item>
+            </Form.Item> */}
 
             <Form.Item
                 {...layout1}
